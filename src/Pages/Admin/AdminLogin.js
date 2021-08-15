@@ -27,7 +27,7 @@ class AdminLogin extends Component{
             localStorage.setItem('token',response.data.token)
             localStorage.setItem('userID',response.data.user)
             localStorage.setItem('isAdmin',"true")
-            window.location.href = '/home'
+            window.location.href = '/dashboard'
 
             
         })        

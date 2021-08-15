@@ -10,6 +10,7 @@ function Container(){
         <div>
             
             <Route path="/addUser" component={AddUser}/>
+            <Route path="/dashboard" component={AddUser}/>
 
         </div>
         )
