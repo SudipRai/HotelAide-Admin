@@ -2,6 +2,11 @@
   height: 100vh;
   width: 100wh;
 }
+
+.body-part{
+  height: 100vh;
+  display: flex;
+}
 body{
   margin: 0;
   padding: 0;
@@ -68,4 +73,54 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
   border: none;
   outline: none;
   float: right !important;
+}
+
+.content{
+  width: 60%;
+  float: right;
+  margin: 20px;
+}
+
+.SidebarList .SidebarRow #active{
+  background-color: #293846;
+}
+.navbar-nav #active{
+  background-color: #293846;
+  color: white;
+}
+
+
+.btnlogin{
+padding: 5px;
+margin: 35px;
+margin-top: 40px;
+width: 45%;
+background-color: #f7941d;
+color: black;
+outline: none;
+border: none;
+height: 42px;
+}
+.loginform{
+margin-left: 100px;
+
+}
+.logintext{
+  margin: 20px;
+}
+.check{
+  display: flex;
+  padding: 5px;
+
+}
+.check p{
+  margin-top: 6px;
+  margin-left: 5px;
+  font-size: small;
+}
+.check input{
+  margin-top: 10px;
+}
+.check input{
+  margin-left: 20px;
 }

@@ -24,8 +24,11 @@ class AdminLogin extends Component{
         axios.post("http://localhost:90/adminLogin", this.state,axiosConfig)
         .then((response)=>{
             console.log(response);
-            //setting token and userid into localstorage
+            localStorage.setItem('token',response.data.token)
+            localStorage.setItem('userID',response.data.user)
             localStorage.setItem('isAdmin',"true")
+            window.location.href = '/home'
+
             
         })        
         .catch((err)=>{
