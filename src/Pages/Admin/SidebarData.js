@@ -9,7 +9,7 @@ export const SidebarData=[
     {
         title:"Home",
         icon:<HomeIcon/>,
-        link:""
+        link:"/dashboard"
     },
     {
         title:"Mailbox",
@@ -24,7 +24,7 @@ export const SidebarData=[
     {
         title:"Users",
         icon:<GroupIcon/>,
-        link:""
+        link:"/user"
     },
     {
         title:"Analytics",
