@@ -58,11 +58,9 @@ logout=()=>{
 renderTableData() {
     const {page, perPage, customers} = this.state;
     let items = customers.slice(page * perPage, (page + 1) * perPage);
+    if(this.state.searchTerm===""){
     return items.map((customer) => {
       console.log(customer)
-      if(this.state.searchTerm!=="" && customer.fullname.toLowerCase().indexOf(this.state.searchTerm.toLowerCase())===-1){
-        return null
-    }
        return (
           <tr key={customer._id}>
             <td>{customer._id}</td>
@@ -71,13 +69,29 @@ renderTableData() {
         
           </tr>
        )
-    })
+    })}
+    else{
+        return customers.map((customer) => {
+            console.log(customer)
+            if(this.state.searchTerm!=="" && customer.fullname.toLowerCase().indexOf(this.state.searchTerm.toLowerCase())===-1){
+              return null
+          }
+             return (
+                <tr key={customer._id}>
+                  <td>{customer._id}</td>
+                  <td>{customer.fullname}</td>
+                  <td>{customer.roomno}</td>
+              
+                </tr>
+             )
+          })
+    }
  }
     render(){ 
         const {pages} = this.state;
         return( 
             <div>
-                    <input className="searchbar" type= 'text'  onChange = {this.editSearchTerm} placeholder = 'Search'/>
+                    <input className="searchbar" type= 'text' value={this.state.searchTerm}  onChange = {this.editSearchTerm} placeholder = 'Search'/>
                
                 <br></br>
                 <Table responsive id='students'>
@@ -88,7 +102,13 @@ renderTableData() {
                       <th>Room No</th>
  
                     </tr>
-                      {this.renderTableData()}
+                    
+                  
+                        {this.renderTableData()} 
+                   
+                    
+                    
+    
                   </tbody>
                 </Table>
                 <ReactPaginate
