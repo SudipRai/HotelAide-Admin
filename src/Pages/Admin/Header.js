@@ -9,18 +9,8 @@ import HotelIcon from '@material-ui/icons/Hotel';
 class Header extends Component{
   //logout
   logout=()=>{
-    let axiosConfig = {
-      withCredentials: true,
-    }
-    axios.get('http://localhost:90/adminLogout',axiosConfig)
-    .then((response)=>{
-      console.log(response)
       localStorage.clear()
       window.location.href= '/adminLogin'
-  })
-  .catch((err)=>{
-      console.log(err.response)
-  })
   }
 
     render(){

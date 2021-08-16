@@ -3,7 +3,10 @@ import axios from 'axios';
 import ReactPaginate from 'react-paginate';
 import Table from 'react-bootstrap/Table'
 import {Link} from 'react-router-dom';
-
+import SearchIcon from '@material-ui/icons/Search';
+import IconButton from "@material-ui/core/IconButton";
+import InputAdornment from "@material-ui/core/InputAdornment";
+import { TextField } from "@material-ui/core";
 
 class UserDetail extends Component{
     state = {
@@ -91,8 +94,17 @@ renderTableData() {
         const {pages} = this.state;
         return( 
             <div>
-                    <input className="searchbar" type= 'text' value={this.state.searchTerm}  onChange = {this.editSearchTerm} placeholder = 'Search'/>
-               
+              
+               <TextField InputProps={{
+                          endAdornment: (
+                            <InputAdornment position="start">
+                              <IconButton>
+                              <SearchIcon />
+                              </IconButton>
+                            </InputAdornment>
+                          )
+                          }} className="searchbar" type= 'text' value={this.state.searchTerm}  onChange = {this.editSearchTerm} placeholder = 'Search'/>
+                                      
                 <br></br>
                 <Table responsive id='students'>
                   <tbody>

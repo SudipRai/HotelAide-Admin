@@ -14,7 +14,7 @@ export const SidebarData=[
     {
         title:"Mailbox",
         icon:<EmailIcon/>,
-        link:""
+        link:"/mail"
     },
     {
         title:"Feedbacks",
@@ -31,6 +31,7 @@ export const SidebarData=[
         icon:<TimelineIcon/>,
         link:""
     },
+   
     
 
 ]
