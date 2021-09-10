@@ -8,12 +8,12 @@ export const SidebarRequest=[
     {
         title:"Food",
         icon:<FastfoodIcon/>,
-        link:"/dashboard"
+        link:"/food"
     },
     {
         title:"Service",
         icon:<RoomServiceIcon/>,
-        link:""
+        link:"/service"
     },
     {
         title:"Booking",

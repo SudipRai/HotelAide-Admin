@@ -87,9 +87,10 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
 }
 
 .content{
-  width: 60%;
+  width: 80%;
   float: right;
   margin: 20px;
+  margin-left: 100px;
 }
 
 .SidebarList .SidebarRow #active{
@@ -139,9 +140,8 @@ margin-left: 100px;
 
 .pagination {
   display: flex;
-  justify-content: space-between;
   list-style: none;
-  margin-top: 40px;
+  margin-top: 100px;
   padding: 0;
  }
  
@@ -151,7 +151,7 @@ margin-left: 100px;
   border-radius: 5px;
   border: 1px solid #6c7ac9;
   color: #6c7ac9;
-  margin-left: 10px;
+  margin-left: 5px;
  }
  
  .pagination li:not(.disabled) a:hover {
@@ -182,3 +182,4 @@ margin-left: 100px;
      outline: none;
      border-radius: 25px;
  }
+

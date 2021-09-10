@@ -19,7 +19,7 @@ export const SidebarData=[
     {
         title:"Feedbacks",
         icon:<FeedbackIcon/>,
-        link:""
+        link:"/feedback"
     },
     {
         title:"Users",

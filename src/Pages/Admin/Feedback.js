@@ -5,7 +5,7 @@ import Table from 'react-bootstrap/Table'
 import 'react-toastify/dist/ReactToastify.css';
 import "../../App.css"
 toast.configure()
-class Mailbox extends Component{
+class Feedback extends Component{
     state = {
         messages:[],  
         userID:localStorage.getItem('userID'),
@@ -18,7 +18,7 @@ class Mailbox extends Component{
 
  
  componentDidMount(){
-     axios.get("http://localhost:90/message",this.state.config)
+     axios.get("http://localhost:90/feedback",this.state.config)
      .then((response)=>{
          console.log(response)
          this.setState({
@@ -42,7 +42,7 @@ class Mailbox extends Component{
         return (
            <tr key={message._id}>
              <td>{message.roomno}</td>
-             <td>{message.message}</td>
+             <td>{message.feedback}</td>
          
            </tr>
         )
@@ -56,7 +56,7 @@ class Mailbox extends Component{
                    <tbody>
                      <tr>
                        <th>Room No</th>
-                       <th>Message</th>
+                       <th>Feedback</th>
   
                      </tr>
                      
@@ -71,4 +71,4 @@ class Mailbox extends Component{
           </div>                                     
          )}
 }
-export default Mailbox
+export default Feedback
