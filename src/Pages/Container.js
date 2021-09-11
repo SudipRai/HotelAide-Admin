@@ -1,6 +1,7 @@
 import { Component } from "react";
 import {Route} from 'react-router-dom'
 import AddUser from "./Admin/AddUser";
+import Checkout from "./Admin/Checkout";
 import Dashboard from "./Admin/Dashboard";
 import Feedback from "./Admin/Feedback";
 import Food from "./Admin/Food";
@@ -22,7 +23,8 @@ function Container(){
             <PrivateRoute exact path="/mail" component={Mailbox}/> 
             <PrivateRoute exact path="/feedback" component={Feedback}/> 
             <PrivateRoute exact path="/food" component={Food}/> 
-            <PrivateRoute exact path="/service" component={Service}/> 
+            <PrivateRoute exact path="/service" component={Service}/>
+            <PrivateRoute exact path="/checkout" component={Checkout}/> 
 
         </div>
         )

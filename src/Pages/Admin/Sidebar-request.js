@@ -23,7 +23,7 @@ export const SidebarRequest=[
     {
         title:"Checkout",
         icon:<TransitEnterexitIcon/>,
-        link:"/user"
+        link:"/checkout"
     }
    
     
